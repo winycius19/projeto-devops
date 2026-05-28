@@ -1,17 +1,23 @@
-# Projeto de DevOps - API com Teste e Deploy Automático
+# Projeto DevOps - Grupo 2
 
-Projeto feito para a atividade final da matéria de DevOps. Aqui mostrar como criar uma esteira automática (CI/CD) usando o GitHub Actions para testar o código e atualizar o servidor sozinho toda vez que a gente faz um push.
+Trabalho final da disciplina de DevOps da esteira de CI/CD.
 
-## 🚀 Link da API na Nuvem (Render)
-A nossa API já está rodando ao vivo na internet. Você pode acessar por esse link:
-[https://projeto-devops-wpzp.onrender.com/health](https://projeto-devops-wpzp.onrender.com/health)
+## Link da API no Render
+https://projeto-devops-wpzp.onrender.com/health
 
----
+## Como rodar localmente com Docker
 
-## 📦 Como rodar o projeto na sua máquina (Local)
+1. Clone o repositório para o seu computador:
+git clone https://github.com/winycius19/projeto-devops.git
 
-Se quiser baixar o projeto e rodar usando o Docker, é só seguir esses passos no terminal:
+2. Entre na pasta do projeto:
+cd projeto-devops
 
-1. **Clonar o projeto do GitHub:**
-```bash
-   git clone [https://github.com/winycius19/projeto-devops.git](https://github.com/winycius19/projeto-devops.git)
+3. Monte a imagem do Docker:
+docker build -t projeto-devops .
+
+4. Rode o container mapeando a porta:
+docker run -p 8000:8000 projeto-devops
+
+5. Acesse no seu navegador:
+http://localhost:8000/health
